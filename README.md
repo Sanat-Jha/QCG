@@ -6,23 +6,21 @@
 ## 🖼️ Screenshots
 
 ### 🌑 Dark Theme
-![image](https://github.com/user-attachments/assets/a93714fe-47b7-41bf-b76a-ed0d8894bf9b)
-
-![image](https://github.com/user-attachments/assets/87c2f320-9b9c-44c2-bec7-784616067c4e)
-
-![image](https://github.com/user-attachments/assets/29ce23a7-b23e-4a74-b93a-ce98f7b4c364)
-
-![image](https://github.com/user-attachments/assets/c92815b1-d009-44f8-974a-9d32c9606e71)
-
+<div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between;">
+  <img src="https://github.com/user-attachments/assets/a93714fe-47b7-41bf-b76a-ed0d8894bf9b" width="30%" />
+  <img src="https://github.com/user-attachments/assets/87c2f320-9b9c-44c2-bec7-784616067c4e" width="30%" />
+  <img src="https://github.com/user-attachments/assets/29ce23a7-b23e-4a74-b93a-ce98f7b4c364" width="30%" />
+  <img src="https://github.com/user-attachments/assets/c92815b1-d009-44f8-974a-9d32c9606e71" width="30%" />
+</div>
 
 ### 🌕 Light Theme
-![image](https://github.com/user-attachments/assets/c50f6887-cb2e-41a9-9f67-f876e0dc83ca)
+<div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between;">
+  <img src="https://github.com/user-attachments/assets/c50f6887-cb2e-41a9-9f67-f876e0dc83ca" width="30%" />
+  <img src="https://github.com/user-attachments/assets/a64ac544-a707-4be6-b2e0-4ad2220a5ab0" width="30%" />
+  <img src="https://github.com/user-attachments/assets/718f1606-4dc3-421f-ab4a-b14dce503e37" width="30%" />
+  <img src="https://github.com/user-attachments/assets/7b3b054b-e047-4236-b9b9-dd7e5e1dad45" width="30%" />
+</div>
 
-![image](https://github.com/user-attachments/assets/a64ac544-a707-4be6-b2e0-4ad2220a5ab0)
-
-![image](https://github.com/user-attachments/assets/718f1606-4dc3-421f-ab4a-b14dce503e37)
-
-![image](https://github.com/user-attachments/assets/7b3b054b-e047-4236-b9b9-dd7e5e1dad45)
 
 
 
