@@ -11,227 +11,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #FF69B4;
-            --secondary: #4B0082;
-        }
-        
-        /* Section titles */
-        .section-title {
-            font-family: 'Orbitron', sans-serif;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
+    <link rel="shortcut icon" href="path_to_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
 
-        /* Animated background */
-        .animated-bg {
-            background: linear-gradient(-45deg, #FF69B4, #4B0082, #00ffff, #ff00ff);
-            background-size: 400% 400%;
-            animation: gradient 15s ease infinite;
-        }
-
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        /* Creative text animation */
-        .quantum-text {
-            background: linear-gradient(120deg, #FF69B4, #4B0082, #00ffff, #ff00ff);
-            background-size: 200% auto;
-            color: transparent;
-            -webkit-background-clip: text;
-            background-clip: text;
-            animation: shine 3s linear infinite;
-        }
-
-        @keyframes shine {
-            to { background-position: 200% center; }
-        }
-
-        /* Enhanced Swiper styles */
-        .swiper {
-            width: 100%;
-            padding-top: 50px;
-            padding-bottom: 50px;
-        }
-
-        .swiper-slide {
-            background-position: center;
-            background-size: cover;
-            width: 300px;
-            height: 300px;
-            transition: all 0.3s ease;
-            background: linear-gradient(45deg, #FF69B4, #4B0082);
-            border: 3px solid transparent;
-            border-image: linear-gradient(45deg, #FF69B4, #4B0082);
-            border-image-slice: 1;
-        }
-
-        .swiper-slide-active {
-            transform: scale(1.2);
-            background: linear-gradient(45deg, #00ffff, #ff00ff);
-            box-shadow: 0 0 30px rgba(255, 105, 180, 0.5);
-        }
-
-        /* Enhanced About section */
-        .about-card {
-            background: linear-gradient(135deg, rgba(255, 105, 180, 0.1), rgba(75, 0, 130, 0.1));
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            transition: all 0.3s ease;
-        }
-
-        .about-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(255, 105, 180, 0.2);
-        }
-
-        /* Enhanced Initiative cards */
-        .initiative-card {
-            background: linear-gradient(135deg, #FF69B4, #4B0082);
-            transition: all 0.5s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .initiative-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2));
-            transform: translateX(-100%);
-            transition: transform 0.5s ease;
-        }
-
-        .initiative-card:hover::before {
-            transform: translateX(100%);
-        }
-
-        .initiative-card:hover {
-            transform: translateY(-10px) rotate(2deg);
-            box-shadow: 0 20px 40px rgba(75, 0, 130, 0.3);
-        }
-
-        /* Enhanced floating animation */
-        .floating {
-            animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
-        }
-
-        /* Hero section particles */
-        .hero-particle {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background: white;
-            border-radius: 50%;
-            animation: particle-float 3s infinite;
-        }
-
-        @keyframes particle-float {
-            0%, 100% { transform: translate(0, 0); }
-            50% { transform: translate(20px, -20px); }
-        }
-    </style>
-    <!-- Enhanced Navbar -->
-    <style>
-        .nav-gradient {
-            background: linear-gradient(
-                to right,
-                rgba(255, 255, 255, 0.9),
-                rgba(255, 105, 180, 0.1),
-                rgba(75, 0, 130, 0.1),
-                rgba(255, 255, 255, 0.9)
-            );
-            backdrop-filter: blur(10px);
-        }
-    
-        .nav-link {
-            position: relative;
-            padding: 0.5rem 1rem;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            background-size: 200% auto;
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            transition: all 0.3s ease;
-        }
-    
-        .nav-link::before {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            transform: scaleX(0);
-            transform-origin: right;
-            transition: transform 0.3s ease;
-        }
-    
-        .nav-link:hover::before {
-            transform: scaleX(1);
-            transform-origin: left;
-        }
-    
-        .nav-link:hover {
-            background-position: right center;
-            transform: translateY(-2px);
-        }
-    
-        .logo-container {
-            position: relative;
-            overflow: hidden;
-        }
-    
-        .logo-container::after {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(
-                45deg,
-                transparent,
-                rgba(255, 105, 180, 0.2),
-                transparent
-            );
-            transform: rotate(45deg);
-            animation: shine 3s infinite;
-        }
-    
-        .mobile-menu-button {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            border-radius: 8px;
-            padding: 0.5rem;
-            transition: all 0.3s ease;
-        }
-    
-        .mobile-menu-button:hover {
-            transform: rotate(180deg);
-            box-shadow: 0 0 15px rgba(255, 105, 180, 0.5);
-        }
-    
-
-    </style>
 </head>
 <body class="bg-white dark:bg-gray-900 transition-colors duration-300" data-theme="light">
-    <a href="https://sanatjha.me" target="_blank" class="fixed top-5 right-5 z-50 badge px-4 py-2 text-white rounded-lg shadow-lg hover:scale-110 transition-transform">
-        Project by Sanat Jha
+    <a href="https://sanatjha.me" target="_blank" class="fixed bottom-5 right-5 z-50 badge px-4 py-2 text-white rounded-lg shadow-lg hover:scale-110 transition-transform">
+        Project by Sanat Jha (Portfolio)
     </a>
     <div id="particles-js" class="fixed inset-0 pointer-events-none"></div>
 
@@ -250,7 +36,14 @@
                 <a href="#about" class="nav-link font-medium">About</a>
                 <a href="#initiatives" class="nav-link font-medium">Initiatives</a>
                 <a href="#contact" class="nav-link font-medium">Contact</a>
+                <div class="theme-switch-wrapper">
+                    <button id="theme-toggle" class="theme-toggle">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
             </div>
+            
 
             <div class="md:hidden">
                 <button class="mobile-menu-button">
@@ -293,140 +86,6 @@
         <div id="hero-particles"></div>
     </section>
 
-
-    <style>
-        /* Enhanced gradient background with animation */
-        .work-section-bg {
-            background: linear-gradient(45deg, 
-                rgba(255, 105, 180, 0.1),
-                rgba(75, 0, 130, 0.1),
-                rgba(0, 255, 255, 0.1),
-                rgba(255, 0, 255, 0.1));
-            background-size: 400% 400%;
-            animation: gradientMove 15s ease infinite;
-            position: relative;
-            overflow: hidden;
-        }
-    
-        .work-section-bg::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 50% 50%,
-                rgba(255, 105, 180, 0.1) 0%,
-                transparent 50%);
-            animation: pulse 5s ease-in-out infinite;
-        }
-    
-        /* Animated title */
-        .work-title {
-            background: linear-gradient(120deg, #FF69B4, #4B0082, #00ffff);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            background-size: 200% auto;
-            animation: shineText 3s linear infinite;
-            position: relative;
-        }
-    
-        .work-title::after {
-            content: '';
-            position: absolute;
-            left: 50%;
-            bottom: -10px;
-            width: 100px;
-            height: 3px;
-            background: linear-gradient(90deg, #FF69B4, #4B0082);
-            transform: translateX(-50%) scaleX(0);
-            animation: expandLine 1s ease forwards;
-        }
-    
-        /* Enhanced swiper slides */
-        .swiper-slide {
-            transform-style: preserve-3d;
-            perspective: 1000px;
-        }
-    
-           /* Keep existing styles but update slide content */
-    .slide-content {
-        position: relative;
-        overflow: hidden;
-        transition: transform 0.3s ease;
-    }
-
-    .slide-content:hover {
-        transform: translateY(-10px);
-    }
-
-    /* Simplified overlay styles */
-    .slide-overlay {
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(to top, 
-            rgba(75, 0, 130, 0.8) 0%,
-            rgba(255, 105, 180, 0.4) 100%);
-        opacity: 0;
-        display: flex;
-        align-items: flex-end;
-        padding: 1.5rem;
-        transition: opacity 0.3s ease;
-    }
-
-    .slide-content:hover .slide-overlay {
-        opacity: 1;
-    }
-
-    .slide-title {
-        color: white;
-        font-weight: bold;
-        font-size: 1.25rem;
-        transform: translateY(20px);
-        transition: transform 0.3s ease;
-    }
-
-    .slide-content:hover .slide-title {
-        transform: translateY(0);
-    }
-    
-        /* Animations */
-        @keyframes gradientMove {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-    
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 0.5; }
-            50% { transform: scale(1.5); opacity: 0.2; }
-        }
-    
-        @keyframes shineText {
-            to { background-position: 200% center; }
-        }
-    
-        @keyframes expandLine {
-            to { transform: translateX(-50%) scaleX(1); }
-        }
-    
-    
-        /* Custom pagination */
-        .swiper-pagination-bullet {
-            width: 12px;
-            height: 12px;
-            background: transparent;
-            border: 2px solid #FF69B4;
-            opacity: 1;
-            transition: all 0.3s ease;
-        }
-    
-        .swiper-pagination-bullet-active {
-            background: linear-gradient(45deg, #FF69B4, #4B0082);
-            transform: scale(1.2);
-        }
-    </style>
     
 <!-- Updated Work Section Slides -->
 <section class="py-20 work-section-bg">
@@ -472,220 +131,144 @@
     </div>
 </section>
 
-<script>
-    // Simplified Swiper initialization
-    new Swiper('.swiper', {
-        effect: 'coverflow',
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: 'auto',
-        initialSlide: 2,
-        coverflowEffect: {
-            rotate: 30,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: true,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-        }
-    });
-    </script>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-gray-50 dark:bg-gray-800">
+    
+    <!-- About Section HTML -->
+    <section id="about" class="about-section py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-bold text-center mb-16 text-gray-900 dark:text-white">About Us</h2>
+            <h2 class="section-title text-4xl font-bold text-center mb-16 quantum-text">About Us</h2>
             <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="relative group">
-                    <div class="absolute -inset-1 bg-gradient-to-r from-primary to-quantum-900 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
-                    <img src="path_to_about_image.jpg" alt="QCG Team" class="relative rounded-lg shadow-xl">
+                <div class="about-image-container">
+                    <img src="path_to_about_image.jpg" alt="QCG Team" class="w-full h-full object-cover rounded-lg">
                 </div>
-                <div class="space-y-6">
+                <div class="about-text">
                     <p class="text-lg text-gray-700 dark:text-gray-300">
-                        Quantum Computing Group is a student-run organization at IIT Roorkee, dedicated to fostering quantum computing knowledge and innovation. Founded in 2020, we're part of the ACM IIT Roorkee Student Chapter.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="https://linkedin.com/company/qcgiitr" class="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors duration-300">
-                            <i class="fab fa-linkedin text-2xl"></i>
+                        Quantum Computing Group is a student-run group to inculcate and uplift the culture of quantum computing at IIT Roorkee. Founded in 2020, QCG is currently a part of ACM IIT Roorkee Student Chapter. Our members have varied interests and skills in different domains of quantum computing and attempt to elevate the technological standing of the campus populace in those specialisations. We do so by organising concept discussions, hands-on workshops, open projects and an annual quantum computing hackathon that gives the students exposure to the advancements in the quantum computing sphere.                    </p>
+                    <div class="social-icons">
+                        <a href="https://linkedin.com/company/qcgiitr" class="social-icon">
+                            <i class="fab fa-linkedin"></i>
                         </a>
-                        <a href="https://instagram.com/qcgiitr" class="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors duration-300">
-                            <i class="fab fa-instagram text-2xl"></i>
+                        <a href="https://instagram.com/qcgiitr" class="social-icon">
+                            <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="https://twitter.com/qcgiitr" class="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors duration-300">
-                            <i class="fab fa-twitter text-2xl"></i>
+                        <a href="https://twitter.com/qcgiitr" class="social-icon">
+                            <i class="fab fa-twitter"></i>
                         </a>
-                        <a href="https://medium.com/@qcgiitr" class="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors duration-300">
-                            <i class="fab fa-medium text-2xl"></i>
+                        <a href="https://medium.com/@qcgiitr" class="social-icon">
+                            <i class="fab fa-medium"></i>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Initiatives Section -->
+    
+    <!-- Initiatives Section HTML -->
     <section id="initiatives" class="py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-bold text-center mb-16 text-gray-900 dark:text-white">Our Initiatives</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="initiative-card bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg transform hover:-translate-y-2 transition-all duration-300">
-                    <div class="text-primary text-3xl mb-4">
+            <h2 class="section-title text-4xl font-bold text-center mb-16 quantum-text">Our Initiatives</h2>
+            <div class="initiatives-grid">
+                <div class="initiative-card">
+                    <div class="initiative-icon">
                         <i class="fas fa-comments"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Discussions</h3>
                     <p class="text-gray-600 dark:text-gray-400">Regular quantum computing discussions open for all enthusiasts.</p>
                 </div>
-                <!-- Add more initiative cards here -->
+                <div class="initiative-card">
+                    <div class="initiative-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Workshops</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Hands-on workshops on quantum computing tools and frameworks.</p>
+                </div>
+                <div class="initiative-card">
+                    <div class="initiative-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Community</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Building a strong community of quantum computing enthusiasts.</p>
+                </div>
             </div>
         </div>
     </section>
+    
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-800">
+    
+    <!-- Enhanced Contact Section -->
+    <section id="contact" class="contact-section py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-bold text-center mb-16 text-gray-900 dark:text-white">Contact Us</h2>
+            <h2 class="section-title text-4xl font-bold text-center mb-16 quantum-text">Contact Us</h2>
             <div class="grid md:grid-cols-2 gap-12">
-                <div class="space-y-6">
-                    <div class="flex items-start space-x-4">
-                        <i class="fas fa-map-marker-alt text-primary text-2xl mt-1"></i>
+                <div class="contact-card space-y-6">
+                    <div class="contact-info-item flex items-center">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
                         <div>
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Address</h3>
                             <p class="text-gray-600 dark:text-gray-400">Room No. 109, Students Activity Centre<br>IIT Roorkee, India</p>
                         </div>
                     </div>
-                    <div class="flex items-start space-x-4">
-                        <i class="fas fa-envelope text-primary text-2xl mt-1"></i>
+                    <div class="contact-info-item flex items-center">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
                         <div>
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Email</h3>
                             <p class="text-gray-600 dark:text-gray-400">qcg.acm@iitr.ac.in</p>
                         </div>
                     </div>
                 </div>
-                <div class="rounded-lg overflow-hidden shadow-lg">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3459.922112216556!2d77.899746!3d29.866520000000005!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390eb32bac1adc93%3A0x80bba7dd5e4d1a6a!2sStudents%20Activity%20Centre%20-%20SAC!5e0!3m2!1sen!2sin!4v1739294243091!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                </div>
+                <div class="map-container">
+                    <div class="map-wrapper">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3459.922112216556!2d77.899746!3d29.86652!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390eb32bac1adc93%3A0x80bba7dd5e4d1a6a!2sStudents%20Activity%20Centre%20-%20SAC!5e0!3m2!1sen!2sin!4v1739337772848!5m2!1sen!2sin" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-
-    <footer class="bg-gray-900 text-white py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p>&copy; 2024 Quantum Computing Group, IIT Roorkee</p>
+    
+    <!-- Enhanced Footer -->
+    <footer class="footer py-8">
+        <div class="footer-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 items-center">
+                <div class="text-center md:text-left">
+                    <img src="path_to_logo.png" alt="QCG Logo" class="h-10 w-auto inline-block">
+                </div>
+                <div class="text-center">
+                    <p class="footer-text">&copy; 2024 Quantum Computing Group, IIT Roorkee</p>
+                </div>
+                <div class="text-center md:text-right">
+                    <div class="flex justify-center md:justify-end space-x-4">
+                        <a href="https://linkedin.com/company/qcgiitr" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="https://instagram.com/qcgiitr" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://twitter.com/qcgiitr" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="https://medium.com/@qcgiitr" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-medium text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
-
-    <script>
-        // Mobile menu toggle functionality
-        const mobileMenuButton = document.querySelector('.mobile-menu-button');
-        const mobileMenu = document.querySelector('.mobile-menu');
     
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            
-            // Add animation for menu items
-            const menuItems = mobileMenu.querySelectorAll('.nav-link');
-            menuItems.forEach((item, index) => {
-                item.style.animation = `fadeIn 0.5s ease forwards ${index * 0.1}s`;
-            });
-        });
-    
-        // Add scroll effect to navbar
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 0) {
-                nav.style.background = 'linear-gradient(to right, rgba(255,255,255,0.95), rgba(255,105,180,0.15), rgba(75,0,130,0.15), rgba(255,255,255,0.95))';
-            } else {
-                nav.style.background = 'linear-gradient(to right, rgba(255,255,255,0.9), rgba(255,105,180,0.1), rgba(75,0,130,0.1), rgba(255,255,255,0.9))';
-            }
-        });
-    </script>
-    <script>
-        // Create floating particles in hero section
-        function createParticles() {
-            const container = document.getElementById('hero-particles');
-            for (let i = 0; i < 20; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'hero-particle';
-                particle.style.left = `${Math.random() * 100}%`;
-                particle.style.top = `${Math.random() * 100}%`;
-                particle.style.animationDelay = `${Math.random() * 2}s`;
-                container.appendChild(particle);
-            }
-        }
 
-        createParticles();
 
-        // Enhanced scroll animations
-        const observerOptions = {
-            threshold: 0.1
-        };
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-fade-in');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('section').forEach(section => {
-            observer.observe(section);
-        });
-
-        // Initialize Swiper with enhanced effects
-        new Swiper('.swiper', {
-            effect: 'coverflow',
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: 'auto',
-            coverflowEffect: {
-                rotate: 50,
-                stretch: 0,
-                depth: 100,
-                modifier: 1,
-                slideShadows: true,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-            },
-        });
-
-        // Animate quantum words
-        anime({
-            targets: '#quantum-words',
-            opacity: [0, 1],
-            translateY: [20, 0],
-            delay: 1000,
-            duration: 2000,
-            easing: 'easeOutExpo'
-        });
-
-        // Initialize particles
-        particlesJS('particles-js', {
-            particles: {
-                number: { value: 80 },
-                color: { value: '#ffffff' },
-                shape: { type: 'circle' },
-                opacity: {
-                    value: 0.5,
-                    random: true
-                },
-                size: {
-                    value: 3,
-                    random: true
-                },
-                move: {
-                    enable: true,
-                    speed: 6
-                }
-            }
-        });
-    </script>
+    <script src="script.js"></script>
+    <script src="light-particles.js"></script>
 </body>
 </html>

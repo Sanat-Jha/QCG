@@ -1,0 +1,85 @@
+/* Dark theme overrides */
+body {
+    background-color: #1a1a2e !important;
+    color: #ffffff !important;
+}
+
+/* Navigation */
+.nav-gradient {
+    background: linear-gradient(
+        to right,
+        rgba(26, 26, 46, 0.95),
+        rgba(75, 0, 130, 0.2),
+        rgba(255, 105, 180, 0.2),
+        rgba(26, 26, 46, 0.95)
+    ) !important;
+}
+
+/* Hero Section */
+.animated-bg {
+    background: linear-gradient(-45deg, #4B0082, #1a1a2e, #2d1f3d, #3d1f2d) !important;
+}
+
+/* About Section */
+.about-section::before {
+    background: linear-gradient(45deg, 
+        rgba(75, 0, 130, 0.2),
+        rgba(26, 26, 46, 0.2),
+        rgba(255, 105, 180, 0.2)) !important;
+}
+
+.about-text {
+    background: rgba(26, 26, 46, 0.3) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Initiatives Section */
+.initiative-card {
+    background: linear-gradient(135deg, rgba(75, 0, 130, 0.2), rgba(26, 26, 46, 0.2)) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.initiative-card:hover::before {
+    opacity: 0.2 !important;
+}
+
+/* Contact Section */
+.contact-section::before {
+    background: linear-gradient(45deg, 
+        rgba(75, 0, 130, 0.1),
+        rgba(26, 26, 46, 0.1),
+        rgba(255, 105, 180, 0.1)) !important;
+}
+
+.contact-card {
+    background: rgba(26, 26, 46, 0.3) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.contact-info-item {
+    background: linear-gradient(135deg, 
+        rgba(75, 0, 130, 0.2),
+        rgba(26, 26, 46, 0.2)) !important;
+    color: #ffffff !important;
+}
+
+/* Text colors */
+.text-gray-600 {
+    color: #a0aec0 !important;
+}
+
+.text-gray-700 {
+    color: #cbd5e0 !important;
+}
+
+.text-gray-900 {
+    color: #ffffff !important;
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(to right,
+        #0f0f1a,
+        #1a1a2e,
+        #0f0f1a) !important;
+}
