@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
-<body class="bg-white dark:bg-gray-900 transition-colors duration-300" data-theme="light">
+<body class=" transition-colors duration-300" data-theme="light">
     <a href="https://sanatjha.me" target="_blank" class="fixed bottom-5 right-5 z-50 badge px-4 py-2 text-white rounded-lg shadow-lg hover:scale-110 transition-transform">
         Project by Sanat Jha (Portfolio)
     </a>
@@ -66,25 +66,34 @@
 
 <!-- Enhanced Hero Section -->
 <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden animated-bg">
-        <div class="hero-content text-center z-10 px-4">
-            <h1 class="quantum-text text-6xl md:text-8xl font-bold mb-6 font-['Orbitron']">
-                QCG IIT Roorkee
-            </h1>
-            <div id="quantum-words" class="text-2xl md:text-3xl text-white mb-8 opacity-0 font-['Space_Mono']">
-                Exploring the Quantum Realm
-            </div>
-            <div class="mt-8 space-x-4">
-                <a href="#about" class="inline-block px-6 py-3 bg-primary text-white rounded-lg transform hover:scale-105 transition-all duration-300 hover:shadow-lg">
-                    Learn More
-                </a>
-                <a href="#contact" class="inline-block px-6 py-3 bg-secondary text-white rounded-lg transform hover:scale-105 transition-all duration-300 hover:shadow-lg">
-                    Get in Touch
-                </a>
-            </div>
+    <div class="hero-content text-center z-10 px-4">
+        <h1 class="quantum-text text-6xl md:text-8xl font-bold mb-6 font-['Orbitron']">
+            QCG IIT Roorkee
+        </h1>
+        <div id="quantum-words" class="text-2xl md:text-3xl text-white mb-8 opacity-0 font-['Space_Mono']">
+            Exploring the Quantum Realm
         </div>
-        <!-- Add floating particles -->
-        <div id="hero-particles"></div>
-    </section>
+        <div class="mt-8 space-x-4">
+            <a href="#about" class="inline-block px-6 py-3 bg-primary text-white rounded-lg transform hover:scale-105 transition-all duration-300 hover:shadow-lg">
+                Learn More
+            </a>
+            <a href="#contact" class="inline-block px-6 py-3 bg-secondary text-white rounded-lg transform hover:scale-105 transition-all duration-300 hover:shadow-lg">
+                Get in Touch
+            </a>
+        </div>
+    </div>
+
+    <!-- Scroll Down Arrow -->
+    <a href="#about" class="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+    </a>
+
+    <!-- Add floating particles -->
+    <div id="hero-particles"></div>
+</section>
+
 
     
 <!-- Updated Work Section Slides -->
@@ -142,7 +151,7 @@
                     <img src="path_to_about_image.jpg" alt="QCG Team" class="w-full h-full object-cover rounded-lg">
                 </div>
                 <div class="about-text">
-                    <p class="text-lg text-gray-700 dark:text-gray-300">
+                    <p class="text-lg aboutPara">
                         Quantum Computing Group is a student-run group to inculcate and uplift the culture of quantum computing at IIT Roorkee. Founded in 2020, QCG is currently a part of ACM IIT Roorkee Student Chapter. Our members have varied interests and skills in different domains of quantum computing and attempt to elevate the technological standing of the campus populace in those specialisations. We do so by organising concept discussions, hands-on workshops, open projects and an annual quantum computing hackathon that gives the students exposure to the advancements in the quantum computing sphere.                    </p>
                     <div class="social-icons">
                         <a href="https://linkedin.com/company/qcgiitr" class="social-icon">
@@ -172,22 +181,22 @@
                     <div class="initiative-icon">
                         <i class="fas fa-comments"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Discussions</h3>
-                    <p class="text-gray-600 dark:text-gray-400">Regular quantum computing discussions open for all enthusiasts.</p>
+                    <h3 class="text-xl font-semibold mb-2 aboutPara">Discussions</h3>
+                    <p class="aboutPara">Regular quantum computing discussions open for all enthusiasts.</p>
                 </div>
                 <div class="initiative-card">
                     <div class="initiative-icon">
                         <i class="fas fa-laptop-code"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Workshops</h3>
-                    <p class="text-gray-600 dark:text-gray-400">Hands-on workshops on quantum computing tools and frameworks.</p>
+                    <h3 class="text-xl font-semibold mb-2 aboutPara">Workshops</h3>
+                    <p class="aboutPara">Hands-on workshops on quantum computing tools and frameworks.</p>
                 </div>
                 <div class="initiative-card">
                     <div class="initiative-icon">
                         <i class="fas fa-users"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Community</h3>
-                    <p class="text-gray-600 dark:text-gray-400">Building a strong community of quantum computing enthusiasts.</p>
+                    <h3 class="text-xl font-semibold mb-2 aboutPara">Community</h3>
+                    <p class="aboutPara">Building a strong community of quantum computing enthusiasts.</p>
                 </div>
             </div>
         </div>
@@ -206,8 +215,8 @@
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <div>
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Address</h3>
-                            <p class="text-gray-600 dark:text-gray-400">Room No. 109, Students Activity Centre<br>IIT Roorkee, India</p>
+                            <h3 class="text-lg font-semibold aboutPara">Address</h3>
+                            <p class="aboutPara">Room No. 109, Students Activity Centre<br>IIT Roorkee, India</p>
                         </div>
                     </div>
                     <div class="contact-info-item flex items-center">
@@ -215,8 +224,8 @@
                             <i class="fas fa-envelope"></i>
                         </div>
                         <div>
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Email</h3>
-                            <p class="text-gray-600 dark:text-gray-400">qcg.acm@iitr.ac.in</p>
+                            <h3 class="text-lg font-semibold aboutPara">Email</h3>
+                            <p class="aboutPara">qcg.acm@iitr.ac.in</p>
                         </div>
                     </div>
                 </div>
@@ -269,6 +278,5 @@
 
 
     <script src="script.js"></script>
-    <script src="light-particles.js"></script>
 </body>
 </html>

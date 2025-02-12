@@ -36,6 +36,35 @@
 @keyframes shine {
     to { background-position: 200% center; }
 }
+/* Scrollbar width and background */
+::-webkit-scrollbar {
+    width: 12px; /* Adjust the width as needed */
+    background-color: #1e1e1e; /* Background of the scrollbar track */
+    border-radius: 10px; /* Optional rounded corners */
+}
+
+/* Scrollbar track (background behind the thumb) */
+::-webkit-scrollbar-track {
+    background: #1e1e1e; /* Dark background to match a dark theme */
+    border-radius: 10px;
+}
+
+/* Scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #6a11cb, #2575fc); /* Gradient colors */
+    border-radius: 10px;
+    border: 2px solid #1e1e1e; /* Adds a border to separate thumb from track */
+}
+
+/* Scrollbar on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #2575fc, #6a11cb); /* Reverse the gradient on hover */
+}
+
+/* Scrollbar corner (for both horizontal and vertical scroll) */
+::-webkit-scrollbar-corner {
+    background: #1e1e1e;
+}
 
 /* Enhanced Swiper styles */
 .swiper {
@@ -398,7 +427,9 @@ transform: translateY(0);
     gap: 1.5rem;
     margin-top: 2rem;
 }
-
+.aboutPara{
+    color:black;
+}
 .social-icon {
     position: relative;
     width: 40px;

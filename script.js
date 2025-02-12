@@ -157,7 +157,8 @@ document.querySelectorAll('.initiative-card').forEach(card => {
             disableOnInteraction: false,
         }
     }); 
-// Theme switcher functionality
+
+    // Theme switcher functionality
 const themeToggle = document.getElementById('theme-toggle');
 const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
 
@@ -170,6 +171,7 @@ function loadDarkTheme() {
         darkTheme.href = 'style-dark.css';
         document.head.appendChild(darkTheme);
     }
+    loadThemeScript('dark-particles.js');
 }
 
 // Function to remove dark theme stylesheet
@@ -178,6 +180,36 @@ function removeDarkTheme() {
     if (darkTheme) {
         darkTheme.remove();
     }
+    loadThemeScript('light-particles.js');
+}
+
+// Function to set initial icon visibility
+function setInitialIconState(isDark) {
+    const sunIcon = document.querySelector('.theme-toggle .fa-sun');
+    const moonIcon = document.querySelector('.theme-toggle .fa-moon');
+    
+    if (isDark) {
+        sunIcon.style.opacity = '0';
+        moonIcon.style.opacity = '1';
+    } else {
+        sunIcon.style.opacity = '1';
+        moonIcon.style.opacity = '0';
+    }
+}
+
+// Function to load the appropriate particle script
+function loadThemeScript(scriptName) {
+    // Remove any existing theme scripts
+    const existingScript = document.getElementById('theme-particles-script');
+    if (existingScript) {
+        existingScript.remove();
+    }
+    
+    // Add the new script
+    const script = document.createElement('script');
+    script.id = 'theme-particles-script';
+    script.src = scriptName;
+    document.body.appendChild(script);
 }
 
 // Function to toggle theme
@@ -229,9 +261,10 @@ themeToggle.addEventListener('click', toggleTheme);
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme === 'dark' || (!savedTheme && prefersDarkScheme.matches)) {
     loadDarkTheme();
-    // Update initial icon state
-    document.querySelector('.theme-toggle .fa-sun').style.opacity = '0';
-    document.querySelector('.theme-toggle .fa-moon').style.opacity = '1';
+    setInitialIconState(true);  // Dark mode
+} else {
+    removeDarkTheme();
+    setInitialIconState(false); // Light mode
 }
 
 // Listen for system theme changes
@@ -239,8 +272,60 @@ prefersDarkScheme.addEventListener('change', (e) => {
     if (!localStorage.getItem('theme')) {
         if (e.matches) {
             loadDarkTheme();
+            setInitialIconState(true);
         } else {
             removeDarkTheme();
+            setInitialIconState(false);
         }
     }
+});
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const quantumWordsElement = document.getElementById("quantum-words");
+    const baseText = "Exploring the Quantum ";
+    const words = [
+        "Realm",
+        "Information",
+        "Algorithms",
+        "Communication",
+        "Cryptography",
+        "Hardware",
+        "Machine Learning",
+        "Computing"
+    ];
+
+    let wordIndex = 0;
+    let charIndex = 0;
+    let typing = true; // Flag to check if typing or deleting
+
+    function typeAnimation() {
+        const currentWord = words[wordIndex];
+        const displayedText = currentWord.substring(0, charIndex);
+
+        quantumWordsElement.textContent = baseText + displayedText;
+
+        if (typing) {
+            if (charIndex < currentWord.length) {
+                charIndex++;
+                setTimeout(typeAnimation, 100); // Typing speed
+            } else {
+                typing = false;
+                setTimeout(typeAnimation, 2000); // Pause before deleting
+            }
+        } else {
+            if (charIndex > 0) {
+                charIndex--;
+                setTimeout(typeAnimation, 50); // Deleting speed
+            } else {
+                typing = true;
+                wordIndex = (wordIndex + 1) % words.length; // Move to next word
+                setTimeout(typeAnimation, 500); // Pause before typing new word
+            }
+        }
+    }
+
+    // Start the typing animation
+    typeAnimation();
 });
