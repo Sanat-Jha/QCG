@@ -28,7 +28,7 @@
 ---
 ## 📜 About the Project
 
-This repository contains my submission for the **Quantum Computing Group (QCG)** web developement vertical recruitment project. Due the late update and inavalibility of time, I could not bring out the best output and some design and UX bugs might be missed but I have tried my best and hope you like it.
+This repository contains my submission for the **Quantum Computing Group (QCG)** web developement vertical recruitment project. Due the late update and inavalibility of time, I could not bring out the best output and some design and UX bugs might be skipped (example - theme switch not working on mobile screen) but I have tried my best and hope you like it.
 
 ---
 
